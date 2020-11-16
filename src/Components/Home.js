@@ -15,8 +15,7 @@ class Home extends Component {
     getProductData = () => {
         axios.get(url)
             .then((res) => {
-                // handle success
-                console.log("res", res)
+                // handle success                
                 this.props.getProducts(res.data)
                 this.props.filterProducts(res.data)
                 console.log("products", this.props.products)

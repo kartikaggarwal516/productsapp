@@ -24,11 +24,6 @@ class Header extends Component {
     applyFilter = () => {
         let { os,memory,storage,price } = this.state
         let { products, filterProducts } = this.props
-
-        console.log("os", os)        
-        console.log("memory", memory)
-        console.log("storage", storage)
-        console.log("price", price)
         
         products = products.filter(p => {
             let osfilter = true, memoryfilter = true, storagefilter=true, pricefilter=true
@@ -73,8 +68,7 @@ class Header extends Component {
     changeOS = (event) => {    
         const {name,checked} = event.target 
         let {os} = this.state
-           
-        console.log("os name",name,"check",checked)
+                   
         if(checked){
             os.push(name)
         }
@@ -85,8 +79,7 @@ class Header extends Component {
     }
     changeMemory = (event) => {
         const {name,checked} = event.target   
-        let {memory} = this.state 
-        console.log("memory name",name,"check",checked)
+        let {memory} = this.state         
         
         if(checked){
             memory.push(name)
@@ -97,8 +90,7 @@ class Header extends Component {
     }
     changeStorage = (event) => {
         const {name,checked} = event.target    
-        let {storage} = this.state
-        console.log("storage name",name,"check",checked)
+        let {storage} = this.state        
 
         if(checked){
             storage.push(name)
@@ -152,8 +144,7 @@ class Header extends Component {
         }
     }
     render() {
-        const { os,memory,storage,price, ioscount, androidcount, memory4, memory8, memory12, count64, count128, count264 } = this.state
-        console.log("os",os,"memory",memory, "storage check",storage.includes("64"))
+        const { os,memory,storage,price, ioscount, androidcount, memory4, memory8, memory12, count64, count128, count264 } = this.state        
         return (
             <div className="header">
                 <div className="headbox">
