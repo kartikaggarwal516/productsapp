@@ -1,0 +1,14 @@
+.homecontainer{        
+    display: flex;
+    flex-direction: column;    
+}
+
+.tableview{
+    display: flex;
+    justify-content: center;
+    width: 100vw;    
+    margin-top: 50px;
+}
+.tableview table{
+    width: 70vw;
+}
